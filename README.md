@@ -14,12 +14,6 @@
 
 ### **Teste do model**
 
-- [x] O usuário deve ter as seguintes propriedades:
-    id: string;
-    name: string;
-    admin: boolean;
-    email: string;
-    created_at: Date;
-    updated_at: Date;
+- [x] O usuário deve ter as seguintes propriedades: id, name, admin, email, created_at e updated_at
   - A propriedade `admin` dever ser iniciada como `false` e o `id` deve ser um `uuid` gerado automaticamente.
   
