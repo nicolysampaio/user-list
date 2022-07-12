@@ -14,14 +14,12 @@
 
 ### **Teste do model**
 
-- [] O usuário deve ter as seguintes propriedades:
-  `{
+- [x] O usuário deve ter as seguintes propriedades:
     id: string;
     name: string;
     admin: boolean;
     email: string;
     created_at: Date;
     updated_at: Date;
-  }`
   - A propriedade `admin` dever ser iniciada como `false` e o `id` deve ser um `uuid` gerado automaticamente.
   
