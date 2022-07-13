@@ -2,18 +2,42 @@
 
 ## Requisitos
 
-### **Rotas da aplicação**
-
-- [] POST `/users` - A rota deve receber `name`, e `email` dentro do corpo da requisição para que seja possível cadastrar um usuário.
-
-- [] PATCH `/users/:user_id/admin` - A rota deve receber, nos parâmetros da rota, o `id` de um usuário e transformar esse usuário em admin.
-
-- [] GET `/users/:user_id` - A rota deve receber, nos parâmetros da rota, o `id` de um usuário e devolver as informações do usuário encontrado pelo corpo da resposta.
-
-- [] GET `/users` - A rota deve receber, pelo header da requisição, uma propriedade `user_id` contendo o `id` do usuário e retornar uma lista com todos os usuários cadastrados. O `id` deverá ser usado para validar se o usuário que está solicitando a listagem é um admin. O retorno da lista deve ser feito apenas se o usuário for admin.
-
 ### **Teste do model**
 
-- [x] O usuário deve ter as seguintes propriedades: id, name, admin, email, created_at e updated_at
-  - A propriedade `admin` dever ser iniciada como `false` e o `id` deve ser um `uuid` gerado automaticamente.
-  
+- [x] Should be able to create an user with all props
+
+### **Testes do repositório**
+
+- [x] Should be able to create new users
+- [x] Should be able to list all users
+- [x] Should be able to find user by ID
+- [x] Should be able to find user by e-mail address
+- [x] Should be able to turn an user to admin
+
+### **Testes de useCases**
+
+- [x] Should be able to create new users
+- [x] Should not be able to crete new users when email is already taken
+- [x] Should be able to turn an user as admin
+- [x] Should not be able to turn a non existing user as admin
+- [x] Should be able to get user profile by ID
+- [x] Should not be able to show profile of a non existing user
+- [x] Should be able to list all users
+- [x] Should not be able to a non admin user get list of all users
+- [x] Should not be able to a non existing user get list of all users
+
+### **Testes das rotas**
+
+- **[POST] /users**
+  - [x] Should be able to create new users
+  - [x] Should not be able to create new users when email is already taken
+- **[PATCH]/users/:user_id/admin**
+  - [x] Should be able to turn an user as admin
+  - [x] Should not be able to turn a non existing user as admin
+- **[GET] /users/:user_id**
+  - [] Should be able to get user profile by ID
+  - [] Should not be able to show profile of a non existing user
+- **[GET] /users**
+  - [x] Should be able to list all users
+  - [x] Should not be able to a non admin user get list of all users
+  - [x] Should not be able to a non existing user get list of all users
