@@ -35,8 +35,8 @@
   - [x] Should be able to turn an user as admin
   - [x] Should not be able to turn a non existing user as admin
 - **[GET] /users/:user_id**
-  - [] Should be able to get user profile by ID
-  - [] Should not be able to show profile of a non existing user
+  - [x] Should be able to get user profile by ID
+  - [x] Should not be able to show profile of a non existing user
 - **[GET] /users**
   - [x] Should be able to list all users
   - [x] Should not be able to a non admin user get list of all users
